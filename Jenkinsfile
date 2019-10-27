@@ -2,13 +2,7 @@
 pipeline {
  agent any
  stages {
-        stage('Checkout-git'){
-               steps{
-		       sh '''
-				bash -c "git clone git@github.com:hdecaceres/test-jenkins-1.git"
-                       '''
-	       }
-        }
+       
         stage('CreateVirtualEnv') {
             steps {
 				sh '''
