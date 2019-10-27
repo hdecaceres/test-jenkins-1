@@ -4,8 +4,10 @@ pipeline {
  stages {
         stage('Checkout-git'){
                steps{
-		git poll: true, url: 'git@github.com:hdecaceres/test-jenkins-1.git'
-               }
+		       sh '''
+				bash -c "git clone git@github.com:hdecaceres/test-jenkins-1.git"
+                       '''
+	       }
         }
         stage('CreateVirtualEnv') {
             steps {
