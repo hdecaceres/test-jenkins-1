@@ -6,7 +6,7 @@ pipeline {
         stage('CreateVirtualEnv') {
             steps {
 				sh '''
-					bash -c "/usr/local/lib/python3.7/site-packages/virtualenv entorno_virtual && /usr/local/lib/python3.7/site-packages/source entorno_virtual/bin/activate"
+					bash -c "/usr/local/lib/python3.7/site-packages/virtualenv.py entorno_virtual && /usr/local/lib/python3.7/site-packages/source.py entorno_virtual/bin/activate"
 				'''
 
             }
