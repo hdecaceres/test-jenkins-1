@@ -8,6 +8,5 @@ RUN pip install virtualenv
 RUN pip install source
 RUN pip install --upgrade pip
 RUN pip install Flask
-RUN pip install -r /opt/app/requirements.txt
 COPY docker-entrypoint.sh /
 ENTRYPOINT "/docker-entrypoint.sh"
